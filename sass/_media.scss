@@ -1,0 +1,35 @@
+
+@mixin img_media ($size) {
+    background-size: cover;
+    width: 100%;
+    height: $size;
+
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+    
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    .nav_end {
+        display: none;
+    }
+    .burger_menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 576px) {
+
+}
+
+@media (max-width: 360px) {
+
+}

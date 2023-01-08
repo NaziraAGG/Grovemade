@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.start .container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.start .container .header {
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.start .container .header .burger_menu {
+  display: none;
+  gap: 5px;
+  flex-direction: column;
+  background: none;
+  border: 0;
+}
+.start .container .header .burger_menu span {
+  width: 40px;
+  height: 5px;
+  background: #000000;
+  border-radius: 10px;
+}
+.start .container .header .nav {
+  display: flex;
+  gap: 24px;
+}
+.start .container .header .nav a {
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.start .container .header .nav_end a {
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.start .container .main {
+  background-image: url(../img/main_bg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 504px;
+  background-repeat: no-repeat;
+}
+.start .container .main_item {
+  padding-top: 189px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.start .container .main_item h1 {
+  font-size: 43px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+.start .container .main_item p {
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+.start .container .main_item a {
+  padding-top: 16px;
+  font-size: 13px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.desk .container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.desk .container .des {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+.desk .container .des h1 {
+  font-size: 43px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+}
+.desk .container .des p {
+  font-size: 14px;
+  color: #a0a0a0;
+  text-decoration: none;
+  text-align: center;
+}
+.desk .container .des .get {
+  padding-top: 3px;
+  font-size: 13px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+}
+.desk .container .comp {
+  padding: 81px 50px 246px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 441px);
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+.desk .container .comp .comp_sim .details_bg {
+  background-image: url(../img/comp_sim.jpg);
+  height: 441px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.desk .container .comp .comp_sim .details h2 {
+  padding-top: 48px;
+  font-size: 27px;
+  text-align: center;
+  color: #000000;
+}
+.desk .container .comp .comp_sim .details p {
+  padding-top: 23px;
+  font-size: 13px;
+  text-align: center;
+  color: #000000;
+}
+.desk .container .comp .comp_dif .details_bg {
+  background-image: url(../img/comp_dif.jpg);
+  height: 441px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.desk .container .comp .comp_dif .details h2 {
+  padding-top: 48px;
+  font-size: 27px;
+  text-align: center;
+  color: #000000;
+}
+.desk .container .comp .comp_dif .details p {
+  padding-top: 23px;
+  font-size: 13px;
+  text-align: center;
+  color: #000000;
+}
+
+.product .container {
+  padding: 0 63px 160px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.product .container h2 {
+  font-size: 33px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+}
+.product .container p {
+  padding-top: 16px;
+  font-size: 15px;
+  color: #a0a0a0;
+  text-decoration: none;
+  text-align: center;
+}
+.product .container .between {
+  padding-bottom: 24px;
+}
+.product .container .between p {
+  font-size: 10px;
+  color: #E4E4E4;
+  text-align: start;
+}
+.product .container .between .points {
+  display: flex;
+  flex-direction: normal;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.product .container .between .points .cub {
+  width: 7px;
+  height: 7px;
+  background: #000000;
+}
+.product .container .product_type {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 434px);
+  gap: 25px;
+}
+.product .container .product_type .type_bg {
+  height: 434px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.product .container .product_type .type_tx {
+  color: #a0a0a0;
+  font-size: 13px;
+}
+.product .container .product_type .type_tx p {
+  text-align: start;
+}
+
+.inspira .container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.inspira .container .home {
+  background-size: cover;
+  width: 100%;
+  height: 504px;
+}
+.inspira .container .home_item {
+  padding-top: 189px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.inspira .container .home_item h1 {
+  font-size: 66px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+.inspira .container .home_item p {
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+.inspira .container .home_item a {
+  padding-top: 16px;
+  font-size: 13px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.hard .container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.hard .container h2 {
+  padding-top: 116px;
+  font-size: 34px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+}
+.hard .container p {
+  padding-top: 23px;
+  font-size: 16px;
+  color: #a0a0a0;
+  text-decoration: none;
+  text-align: center;
+}
+.hard .container .hard_way {
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 23px 194px 38px;
+  max-width: 1052px;
+  height: 592px;
+}
+
+.work .container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.work .container h2 {
+  font-size: 34px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+}
+.work .container p {
+  padding-top: 23px;
+  font-size: 16px;
+  color: #a0a0a0;
+  text-decoration: none;
+  text-align: center;
+}
+.work .container .work_list {
+  padding: 79px 50px 124px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 273px);
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  row-gap: 27px;
+}
+.work .container .work_list .grid {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .burger_menu {
+    display: flex;
+  }
+  .nav {
+    display: none;
+  }
+  .nav_end {
+    display: none;
+  }
+  .header {
+    gap: 5px;
+  }
+}
