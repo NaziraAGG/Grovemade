@@ -11,12 +11,7 @@ $font-stack: 'Roboto';
     text-transform: uppercase;
     color: #000000;
 }
-@mixin img ($size) {
-    background-size: cover;
-    width: 100%;
-    height: $size;
 
-}
 
 @mixin text ($fontsize, $color) {
     font-size: $fontsize;
@@ -33,9 +28,9 @@ $font-stack: 'Roboto';
     gap: $gap;
 }
 @mixin comp {
-    height: 441px;
     background-size: cover;
     background-repeat: no-repeat;
+
 
 }
 
@@ -45,16 +40,11 @@ $font-stack: 'Roboto';
     color: #000000;
 }
     
-@mixin type_bg () {
-    height: 434px;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 @mixin type_tx () {
     color: #a0a0a0;
     font-size: 13px;
 }
-
 
 
 * {
@@ -66,71 +56,70 @@ $font-stack: 'Roboto';
 body {
     font-family: $font-stack;
 }
+.header {
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.start {
-    .container {
-        @include cont();
-        .header {
-            padding: 30px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    .burger_menu {
+        display: none;
+        gap: 5px;
+        flex-direction: column;
+        background: none;
+        border: 0;
+    }
+    .burger_menu:hover {
+        cursor: pointer;
+    }
 
-            .burger_menu {
-                display: none;
-                gap: 5px;
-                flex-direction: column;
-                background: none;
-                border: 0;
-            }
-
-            .burger_menu span {
-                width: 40px;
-                height: 5px;
-                background: #000000;
-                border-radius: 10px;
-            }
-            .nav {
-                display: flex;
-                justify-content: space-between;
-                a {
-                    @include link();
-                }
-            }
-            .nav_end {
-                a {
-                    @include link();
-                }
-            }
+    .burger_menu span {
+        width: 40px;
+        height: 5px;
+        background: #000000;
+        border-radius: 10px;
+    }
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        a {
+            @include link();
         }
-        .main {
-            background-image: url(../img/main_bg.jpg);
-            @include img(504px);
-            background-repeat: no-repeat;
-            &_item {
-                padding-top: 189px;
-                @include flex(column, 12px);
-
-                h1 {
-                    @include text(43px, #ffffff);
-                }
-                p {
-                    @include text(15px, #ffffff);
-                }
-                a {
-                    padding-top: 16px;
-                    @include text(13px, #ffffff);
-                }
-            }
-
-
+    }
+    .nav_end {
+        a {
+            @include link();
         }
     }
 }
 
-.desk {
-    .container {
-        @include cont();
+.main {
+    background-image: url(../img/main_bg.jpg);
+    @include img(504px);
+    background-repeat: no-repeat;
+    &_item {
+        padding: 189px;
+        @include flex(column, 12px);
+
+        h1 {
+            @include text(43px, #ffffff);
+        }
+        p {
+            @include text(15px, #ffffff);
+        }
+        a {
+            padding-top: 16px;
+            @include text(13px, #ffffff);
+        }
+    }
+
+
+}
+
+.container {
+    @include cont();
+    .desk {
         .des {
             padding-top: 80px;
             @include flex(column, 23px);
@@ -147,54 +136,52 @@ body {
         }
         .comp {
             padding: 81px 50px 246px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(1, 441px);
-            column-gap: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
             .comp_sim {
                 .details_bg {
-                    background-image: url(../img/comp_sim.jpg);
-                    @include comp();
+                    img {
+                        width: 100%;
+                        @include comp();
+                    }
                 }
                 .details {
                    h2 {
                     padding-top: 48px;
                     @include text_2(27px)
-
+    
                    } 
                    p {
                     padding-top: 23px;
                     @include text_2(13px)
-
+    
                    }
                 }
-
+    
             }
             .comp_dif {
                 .details_bg {
-                    background-image: url(../img/comp_dif.jpg);
-                    @include comp();
+                    img {
+                        width: 100%;
+                        @include comp();
+                    }
                 }
                 .details {
                     h2 {padding-top: 48px;
                         @include text_2(27px)
- 
+    
                     } 
                     p {padding-top: 23px;
                         @include text_2(13px)
                     }
                  }
-
             }
         }
-
     }
-}
-
-.product {
-    .container {
+    .product {
         padding: 0 63px 160px;
-        @include cont();
         h2 {
             @include text(33px, #000000);
         }
@@ -218,13 +205,16 @@ body {
             padding-bottom: 24px;
         }
         .product_type {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(1, 434px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             gap: 25px;
             .type {
                 &_bg {
-                    @include type_bg ();
+                    img {
+                        width: 100%;
+                        @include comp();
+                    }
                 }
                 &_tx {
                     @include type_tx ();
@@ -235,36 +225,36 @@ body {
             }
         }
     }
-
 }
 
-.inspira {
-    .container {
-        @include cont();
-        .home {
-            @include img(504px);
-            &_item {
-                padding-top: 189px;
-                @include flex(column, 12px);
+.home {
+    width: 100%;
+    height: 504px;
+    background-image: url(../img/inspiration.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     
-                h1 {
-                    @include text(66px, #ffffff);
-                }
-                p {
-                    @include text(14px, #ffffff);
-                }
-                a {
-                    padding-top: 16px;
-                    @include text(13px, #ffffff);
-                }
-            }
+    .home_item { 
+        padding-top: 189px;
+        @include flex(column, 12px);
+
+        h1 {
+            @include text(66px, #ffffff);
+        }
+        p {
+            @include text(14px, #ffffff);
+        }
+        a {
+            padding-top: 16px;
+            @include text(13px, #ffffff);
         }
     }
 }
 
-.hard {
-    .container {
-        @include cont();
+
+.container {
+    @include cont();
+    .hard {
         h2 {
             padding-top: 116px;
             @include text(34px, #000000);
@@ -275,15 +265,10 @@ body {
         .hard_way {
             background-size: cover;
             background-repeat: no-repeat;
-            margin: 23px 194px 38px;
-            max-width: 1052px;
-            height: 592px;
+            width: 100%;
         }
     }
-}
-.work {
-    .container {
-        @include cont();
+    .work {
         h2 {
             @include text(34px, #000000);
         }
@@ -292,19 +277,23 @@ body {
         }
         .work_list {
             padding: 79px 50px 124px;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(4, 273px);
-            column-gap: 25px;
-            row-gap: 27px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 27px;
+            flex-wrap: wrap;
+
+
             .grid {
+                width: 203px;
+                height: 271px;
                 background-size: cover;
                 background-repeat: no-repeat;
             }
         }
     }
-
 }
+
 
 @import "media"
 
